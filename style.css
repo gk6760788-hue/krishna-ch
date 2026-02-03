@@ -1,0 +1,209 @@
+/* Colors from soft sage and deep olive combo */
+:root {
+    --soft-sage: #ACC8A2;
+    --deep-olive: #1A2517;
+    --accent-yellow: #DAA520;
+    --background-dark: #121212;
+    --text-light: #EEEEEE;
+}
+
+/* Global styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--deep-olive);
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: var(--soft-sage);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--deep-olive);
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: var(--deep-olive);
+}
+
+.language-select {
+    margin-bottom: 20px;
+}
+
+.language-select label {
+    font-weight: 600;
+    margin-right: 10px;
+    color: var(--deep-olive);
+}
+
+.language-select select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid var(--deep-olive);
+    font-weight: 600;
+    background-color: white;
+    color: var(--deep-olive);
+    cursor: pointer;
+}
+
+.chatbox {
+    background-color: var(--deep-olive);
+    border-radius: 10px;
+    padding: 15px;
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-output {
+    height: 300px;
+    overflow-y: auto;
+    border: 2px solid var(--soft-sage);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #223322;
+    color: var(--soft-sage);
+    font-size: 1rem;
+    text-align: left;
+}
+
+textarea#user-input {
+    resize: none;
+    height: 80px;
+    border-radius: 8px;
+    border: 2px solid var(--soft-sage);
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    background-color: #1f2f1f;
+    color: var(--soft-sage);
+}
+
+button#send-btn {
+    background: linear-gradient(90deg, #ACC8A2, #1A2517);
+    color: var(--text-light);
+    border: none;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.4s ease;
+}
+
+button#send-btn:hover {
+    background: var(--accent-yellow);
+    color: var(--deep-olive);
+}
+
+/* Login page styles */
+.login-container {
+    background-color: var(--background-dark);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.login-lamp {
+    position: relative;
+    width: 320px;
+    padding: 40px;
+    background: rgba(255 255 255 / 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(218, 165, 32, 0.6);
+    text-align: center;
+}
+
+.login-lamp::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, var(--accent-yellow), transparent 70%);
+    filter: blur(40px);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Login form */
+
+.login-form h2 {
+    color: var(--accent-yellow);
+    margin-bottom: 25px;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    color: var(--soft-sage);
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, var(--accent-yellow), #DAA520CC);
+    border: none;
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: var(--background-dark);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #daa520ee;
+}
+
+/* Scrollbar for chat output */
+.chat-output::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-output::-webkit-scrollbar-track {
+    background: #223322;
+}
+
+.chat-output::-webkit-scrollbar-thumb {
+    background-color: var(--soft-sage);
+    border-radius: 10px;
+}

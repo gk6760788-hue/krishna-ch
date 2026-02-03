@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lord Krishna Bot - Daily Life Solutions</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lord Krishna Bot</h1>
+            <p>Get answers to your daily life problems</p>
+            <div class="language-select">
+                <label for="language">Select Language:</label>
+                <select id="language">
+                    <option value="hin">हिन्दी</option>
+                    <option value="eng" selected>English</option>
+                    <option value="hing">Hinglish</option>
+                </select>
+            </div>
+        </header>
+
+        <section class="chatbox">
+            <div id="chat-output" class="chat-output"></div>
+            <textarea id="user-input" placeholder="Ask Lord Krishna your question here..."></textarea>
+            <button id="send-btn">Ask</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
